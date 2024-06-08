@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d7d7d7;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  background: url("assets/head-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(1px) brightness(0.7);
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 42%;
+}
+
+.text > p {
+  text-align: center;
+  font-size: 80px;
+  color: #ffffff;
+  font-weight: 100;
+  font-family: "Dancing Script", cursive;
+  width: 10%;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  70% {
+    width: 50%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+
+  }
+}
+
+.typing-animation {
+  font-family: "Dancing Script", cursive;
+  overflow: hidden; /* Ensures the content is hidden until typed */
+  white-space: nowrap; /* Keeps the text on a single line */
+  border-right: 5px solid black; /* Creates the caret effect */
+  animation: typing 4s steps(30, end) infinite, blink-caret 0.75s infinite;
+  border-right: 5px solid black; /* Creates the caret effect */
+  box-sizing: content-box; /* Ensures padding doesn't affect the width calculation */
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-down a {
+  font-size: 40px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.5s ease-in-out;
+}
+
+.scroll-down a:hover {
+  color: #000; /* Change color on hover for a visual effect */
+}
+
+.parallex {
+  background-image: url("assets/collage.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/* ------------------------------------------------------------- */
+
+.third-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.message-container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.message-container h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  color: #d07a7a;
+}
+
+.message-container p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.message-container :nth-child(3) {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-top: 25px;
+}
+
+/* ------------------------------------------------ */
+
+.timeline {
+  background-color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+.timeline h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  color: #d07a7a;
+  margin-bottom: 20px;
+}
+
+.timeline-container {
+  gap: 27px;
+  display: flex;
+  left: -50px;
+  position: relative;
+  width: 108%;
+  height: 460px;
+}
+
+
+.timeline-item {
+  background-color: #f4f4f4;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  width: 29%;
+  right: -6%;
+  top: 17px;
+  border-radius: 21px;
+  height: 375px;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+
+.timeline-item:hover{
+  background-color: #ffffff;
+
+}
+
+.timeline-item .timeline-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  right: -32%;
+  position: relative;
+  top: 31px;
+}
+
+.timeline-item .timeline-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline-item .timeline-content {
+  padding: 51px;
+  position: relative;
+  border-radius: 15px;
+  width: 357px;
+  margin-left: 20px;
+  top: 18px;
+}
+
+.timeline-item .timeline-content h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: #d07a7a;
+  font-family: "Dancing Script", cursive;
+
+}
+
+.timeline-item .timeline-content p {
+  font-family: "Playfair Display", serif;
+  margin: 0 0 10px;
+}
+
+.timeline-item .timeline-content .date {
+  font-size: 14px;
+  color: #666;
+  font-family: "Playfair Display", serif;
+
+}
+/* -------------------------------------------------------------------- */
+
+.counters {
+  position: relative;
+  left: 5%;
+  width: 89%;
+  color: #f4f4f4;
+  text-align: center;
+  top: 50px;
+  background: url(assets/counter.jpg);
+  background-attachment: fixed;
+  height: 171px;
+}
+.counters > div {
+  display: inline-block;
+  margin: 0px 79px;
+  line-height: 33px;
+}
+
+.counter > h3 {
+  font-family: "poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 15px;
+  color: #d07a7a;
+  text-transform: capitalize;
+}
+
+.counter > h1 {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 60px;
+  font-family: "Playfair Display", serif;
+  line-height: 115px;
+}
+
+.quotes-section {
+  padding: 114px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.quotes-section h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  color: #d07a7a;
+  margin-bottom: 20px;
+}
+
+.quotes-carousel {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.quote {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.quote.active {
+  display: block;
+}
+
+
+.contact-form {
+  padding: 50px;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.contact-form h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  color: #d07a7a;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  max-width: 497px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #d07a7a;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.contact-form button:hover {
+  background-color: #b96a6a;
+}
+
+
